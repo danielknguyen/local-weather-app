@@ -1,0 +1,47 @@
+body {
+	background: url('../galaxy-wallpaper-11.jpg')no-repeat;
+}
+.header-title {
+	font-size:5em;
+	color:#FFFFFF;
+}
+.weather-div {
+	display:flex;
+	flex-direction:column;
+}
+.o-cloud {
+	opacity:.7;
+}
+.o-cloud:hover {
+	opacity:1;
+}
+.weather-details {
+	color:#FFFFFF;
+}
+.writtenBy {
+	color:#000000;
+	margin:2.5%;
+}
+.borderAround {
+	border:1px solid #ECECEC;
+	background-color:#ECECEC;
+	padding:1%;
+	opacity:.8;
+}
+.sm-links {
+	font-size:2.5em;
+	opacity:.7;
+}
+.sm-links:hover {
+	text-decoration:none;
+	opacity:1;
+}
+.fa-github-alt {
+	color:#BF55EC;
+}
+.fa-free-code-camp {
+	color:#26A65B;
+}
+.fa-linkedin-square {
+	color:#19B5FE;
+}
