@@ -12,6 +12,9 @@ $(document).ready(function(){
 			url:weatherUrl,
 			method:'get',
 			crossDomain:true,
+			headers:{
+				'Access-Control-Allow-Origin': '*'
+			},
 			success: function(data) {
 				weatherLocation = data.sys.country;
 				weatherDescription = data.weather[0].description;
