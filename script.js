@@ -15,39 +15,41 @@ $(document).ready(function(){
 			weatherKelvin = data.main.temp;
 			weatherFahrenheit = Math.floor(9/5 * weatherKelvin - 459.67);
 			weatherCelsius = Math.floor((weatherFahrenheit - 32) * 5/9);
-			weatherImage = data.weather[0].icon;
+			weatherImage = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
 
 			console.log(data);
+
+			//add user location
 			$('.weather-location')
 				.text(weatherLocation + ',')
 				.css('font-size', '2.5em')
 				.css('color', '#FFFFFF');
+			//add description of weather
 			$('.weather-description')
 				.text(weatherDescription)
 				.css('font-size', '2.5em')
 				.css('color', '#FFFFFF');
+			//add temperature in fahrenheit
 			$('.weather-temperature')
 				.text(weatherFahrenheit + ' F')
 				.css('font-size', '2.5em')
 				.css('color', '#FFFFFF');
 			//add weather icon according to the specific weather
-			// $('.weather-image')
-			// 	.html()
-		})
-	});
+			$('.weather-image')
+				.prepend("<img src='" + weatherImage + "'" + "/>")
+		 	});
 	//mouse click temperature to change to celsius
-	$('.weather-temperature').on('click', function(){
-		$('.weather-temperature')
-			.text(weatherCelsius + ' C')
-			.css('font-size', '2.5em')
-			.css('color', '#FFFFFF');
-	});
+	// $('.weather-temperature').on('click', function(){
+	// 	$('.weather-temperature')
+	// 		.text(weatherCelsius + ' C')
+	// 		.css('font-size', '2.5em')
+	// 		.css('color', '#FFFFFF');
+	// });
 	//mouse click temperature to change to fahrenheit
 	// $('.weather-temperature').on('click', function(){
 	// 	$('.weather-temperature')
 	// 		.text(weatherFahrenheit + ' F')
 	// 		.css('font-size', '2.5em')
 	// 		.css('color', '#FFFFFF');
-	// });
-		
+	});	
 });
