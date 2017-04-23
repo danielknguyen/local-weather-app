@@ -11,9 +11,12 @@ $(document).ready(function(){
 		$.ajax({
 			url:weatherUrl,
 			method:'get',
-			crossDomain:true,
-			headers:{
-				'Access-Control-Allow-Origin': '*'
+			dataType:'jsonp',
+			cors:true,
+			contentType:'application,json',
+			secure:true,
+				headers:{
+					'Access-Control-Allow-Origin': '*'
 			},
 			success: function(data) {
 				weatherLocation = data.sys.country;
