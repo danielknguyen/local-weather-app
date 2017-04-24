@@ -21,35 +21,30 @@
 		</p>
 	</header>
 	<!-- container holding the weather details -->
-		<div class="container weather-div text-center">
-			<div class="weather-location"></div>
-			<div class="weather-description"></div>
-			<div class="weather-temperature"></div>
-			<div class="weather-image"></div>
+	<div class="container weather-div text-center">
+		<div class="weather-location"></div>
+		<div class="weather-description"></div>
+		<div class="weather-temperature"></div>
+		<div class="weather-image">
+		<!-- adding weather icon canvases -->
+			<figure class="icons">
+				<canvas id="weather-icon" width="100" height="100"></canvas>
+			</figure>
 		</div>
+	</div>
+
 	<footer>
 		<p class="text-center writtenBy">
 			<span class="borderAround">
-				Written by 
-				<a title="FCC/daniel" target="_blank" href="https://www.freecodecamp.com/danielknguyen">Daniel Nguyen</a>
+				Powered By 
+				<a title="Dark Sky" target="_blank" href="https://darksky.net/poweredby/">Dark Sky</a>
 			</span>
 		</p>
-		<!-- contains all the social media links and icon -->
-		<div class="text-center social-media-div">
-			<a class="sm-links" href="https://github.com/danielknguyen" title="github/danielknguyen" target="_blank">
-				<i class="fa fa-github-alt" aria-hidden="true"></i>
-			</a>
-			<a class="sm-links" href="https://www.freecodecamp.com/danielknguyen" title="freecodecamp/danielknguyen" target="_blank">
-				<i class="fa fa-free-code-camp" aria-hidden="true"></i>
-			</a>
-			<a class="sm-links" href="https://www.linkedin.com/in/danielknguyen93/" title="linkedin/danielknguyen" target="_blank">
-				<i class="fa fa-linkedin-square" aria-hidden="true"></i>
-			</a>
-		</div>
 	</footer>
 
-
+	
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
+	<script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
 </body>
 </html>
