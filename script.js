@@ -32,10 +32,16 @@ $(document).ready(function(){
 					.css('font-size', '2.5em')
 					.css('color', '#FFFFFF');
 				//add temperature in fahrenheit
-				$('.weather-temperature')
+				$('.weather-fahrenheit')
 					.text(weatherFahrenheit + ' F')
 					.css('font-size', '2.5em')
-					.css('color', '#FFFFFF');
+					.css('color', '#FFFFFF')
+					.show();
+				$('.weather-celsius')
+					.text(weatherCelsius + ' C')
+					.css('font-size', '2.5em')
+					.css('color', '#FFFFFF')
+					.hide();
 				//add weather icon according to the specific weather
 				var icons = new Skycons({"color": "orange"});
 				
@@ -64,20 +70,14 @@ $(document).ready(function(){
 			}
 			
 		});
-	
-	//mouse click temperature to change to celsius
-	// $('.weather-temperature').on('click', function(){
-	// 	$('.weather-temperature')
-	// 		.text(weatherCelsius + ' C')
-	// 		.css('font-size', '2.5em')
-	// 		.css('color', '#FFFFFF');
-	// });
-	//mouse click temperature to change to fahrenheit
-	// $('.weather-temperature').on('click', function(){
-	// 	$('.weather-temperature')
-	// 		.text(weatherFahrenheit + ' F')
-	// 		.css('font-size', '2.5em')
-	// 		.css('color', '#FFFFFF');
-			
+		$('.weather-fahrenheit').on('click', function(){
+			$('.weather-fahrenheit').hide();
+			$('.weather-celsius').show();
+		})
+		$('.weather-celsius').on('click', function(){
+			$('.weather-celsius').hide();
+			$('.weather-fahrenheit').show();
+		})		
 	});	
 });
+	
