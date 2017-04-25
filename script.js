@@ -5,7 +5,7 @@ $(document).ready(function(){
 		latitude = position.coords.latitude;
 		longitude = position.coords.longitude;
 
-		weatherUrl ='http://api.openweathermap.org/data/2.5/weather?' + 'lat=' + latitude + '&lon=' + longitude  + '&APPID=524a91657eafa89021d9d867b06ed414';
+		weatherUrl ='https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?' + 'lat=' + latitude + '&lon=' + longitude  + '&APPID=524a91657eafa89021d9d867b06ed414';
 
 		// Asynchronous retrieving of weather data
 		$.ajax({
