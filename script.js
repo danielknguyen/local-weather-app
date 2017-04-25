@@ -5,68 +5,44 @@ $(document).ready(function(){
 		latitude = position.coords.latitude;
 		longitude = position.coords.longitude;
 
-		weatherUrl = 'https://api.darksky.net/forecast/df35bff65738d6e81b904f50a9198a85/' + latitude + ',' + longitude;
+		weatherUrl ='http://api.openweathermap.org/data/2.5/weather?' + 'lat=' + latitude + '&lon=' + longitude  + '&APPID=524a91657eafa89021d9d867b06ed414';
 
 		// Asynchronous retrieving of weather data
 		$.ajax({
 			url:weatherUrl,
-			type:'GET',
-			dataType:'jsonp',
+			crossDomain:true,
 			success: function(data) {
-				weatherLocation = data.timezone;
-				weatherDescription = data.currently.summary;
-				weatherFahrenheit = Math.floor(data.currently.apparentTemperature);
+				weatherLocation = data.sys.country;
+				weatherDescription = data.weather[0].description;
+				weatherKelvin = data.main.temp;
+				weatherFahrenheit = Math.floor(weatherKelvin * 9/5 - 459.67);
 				weatherCelsius = Math.floor((weatherFahrenheit - 32) * 5/9);
-				weatherIcon = data.currently.icon;
+				weatherIcon =  data.weather[0].icon;
 
 				console.log(data);
 
 				//add user location
 				$('.weather-location')
 					.text(weatherLocation + ',')
-					.css('font-size', '2.5em')
+					.css('font-size', '2em')
 					.css('color', '#FFFFFF');
 				//add description of weather
 				$('.weather-description')
 					.text(weatherDescription)
-					.css('font-size', '2.5em')
+					.css('font-size', '2em')
 					.css('color', '#FFFFFF');
 				//add temperature in fahrenheit
 				$('.weather-fahrenheit')
 					.text(weatherFahrenheit + ' F')
-					.css('font-size', '2.5em')
+					.css('font-size', '2em')
 					.css('color', '#FFFFFF')
 					.show();
 				$('.weather-celsius')
 					.text(weatherCelsius + ' C')
-					.css('font-size', '2.5em')
+					.css('font-size', '2em')
 					.css('color', '#FFFFFF')
 					.hide();
-				//add weather icon according to the specific weather
-				var icons = new Skycons({"color": "orange"});
-
-					if(weatherIcon.indexOf("partly-cloudy-night") >= 0) {
-						icons.add("weather-icon", Skycons.PARTLY_CLOUDY_DAY);
-					} else if (weatherIcon.indexOf("clear-day") >= 0) {
-						icons.add("weather-icon", Skycons.CLEAR_DAY);
-					} else if (weatherIcon.indexOf("clear-night") >= 0) {
-						icons.add("weatherDescription", Skycons.CLEAR_NIGHT);
-					} else if (weatherIcon.indexOf("partly-cloudy-night") >= 0) {
-						icons.add("weatherDescription", Skycons.PARTLY_CLOUDY_NIGHT);
-					} else if (weatherIcon.indexOf("cloudy") >= 0) {
-						icons.add("weatherDescription", Skycons.CLOUDY);
-					} else if (weatherIcon.indexOf("rain") >= 0) {
-						icons.add("weatherDescription", Skycons.RAIN);
-					} else if (weatherIcon.indexOf("sleet") >= 0) {
-						icons.add("weatherDescription", Skycons.SLEET);
-					} else if (weatherIcon.indexOf("snow") >= 0) {
-						icons.add("weatherDescription", Skycons.SNOW);
-					} else if (weatherIcon.indexOf("wind") >= 0) {
-						icons.add("weatherDescription", Skycons.WIND);
-					} else if (weatherIcon.indexOf("fog") >= 0) {
-						icons.add("weatherDescription", Skycons.FOG);
-					}
-				icons.play();
+				$('.weather-image').prepend('<img id="theWeatherIcon" src="http://openweathermap.org/img/w/' + weatherIcon + '.png' + '"' + '/>');
 			}
 			
 		});

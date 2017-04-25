@@ -9,45 +9,41 @@
 	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="styles/mobile.css">
 </head>
 <body>
-	<header>
-		<!-- title of the weather app -->
-		<p class="text-center header-title">
-			Cl
-			<span class="o-cloud">
-				<i class="fa fa-cloud" aria-hidden="true"></i>
-			</span>
-			ud 
-			</br>Cast
-		</p>
-	</header>
-	<!-- container holding the weather details -->
-	<div class="container weather-div text-center">
-		<div class="weather-location"></div>
-		<div class="weather-description"></div>
-		<div class="weather-temperature">
+	<div class="container weatherAppContainer">
+		<div class="appTitle">
+			<!-- title of the weather app -->
+			<p class="text-center header-title">
+				Cl
+				<span class="o-cloud">
+					<i class="fa fa-cloud" aria-hidden="true"></i>
+				</span>
+				ud 
+				</br>Cast
+			</p>
+		</div>
+		<!-- container holding the weather details -->
+		<div class="weather-div text-center">
+			<div class="weather-location"></div>
+			<div class="weather-description"></div>
+			<div class="weather-temperature">
 			<div class="weather-fahrenheit"></div>
 			<div class="weather-celsius"></div>
-		</div>
-		<div class="weather-image">
-		<!-- adding weather icon canvases -->
-			<figure class="icons">
-				<canvas id="weather-icon" width="100" height="100"></canvas>
-			</figure>
-		</div>
-	</div>
+			</div>
+				<div class="weather-image"></div>
+			</div>
 
-	<footer>
-		<p class="text-center writtenBy">
-			<span class="borderAround">
-				Powered By 
-				<a title="Dark Sky" target="_blank" href="https://darksky.net/poweredby/">Dark Sky</a>
-			</span>
-		</p>
-	</footer>
+			<div class="footer">
+				<p class="text-center writtenBy">
+					<span class="borderAround">
+						Powered By 
+						<a title="Open Weather API" target="_blank" href="https://openweathermap.org/current">Open Weather API</a>
+					</span>
+				</p>
+			</div>
+	</div>
 
 	
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
-	<script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
 </body>
 </html>

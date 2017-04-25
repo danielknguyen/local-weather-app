@@ -1,19 +1,17 @@
 body {
-	background: url('../galaxy-wallpaper-11.jpg')no-repeat;
+	background:url('../galaxy-wallpaper-11.jpg');
+}
+.weatherAppContainer {
+	margin-top:5%;
 }
 .header-title {
-	font-size:5em;
+	font-size:3em;
 	color:#FFFFFF;
 }
 .weather-div {
-	display:flex;
-	flex-direction:column;
-}
-.o-cloud {
-	opacity:.7;
-}
-.o-cloud:hover {
-	opacity:1;
+	border:1px solid #FFFFFF;
+	width:40%;
+	margin:0 30%;	
 }
 .weather-details {
 	color:#FFFFFF;
@@ -29,12 +27,10 @@ body {
 	opacity:.8;
 }
 .sm-links {
-	font-size:2.5em;
-	opacity:.7;
+	font-size:2em;
 }
 .sm-links:hover {
 	text-decoration:none;
-	opacity:1;
 }
 .fa-github-alt {
 	color:#BF55EC;
