@@ -1,5 +1,5 @@
 body {
-	background:url('../galaxy-wallpaper-11.jpg');
+	background: url('../galaxy-wallpaper-11.jpg')no-repeat;
 }
 .weatherAppContainer {
 	margin-top:5%;
@@ -9,12 +9,15 @@ body {
 	color:#FFFFFF;
 }
 .weather-div {
-	border:1px solid #FFFFFF;
-	width:40%;
-	margin:0 30%;	
+	border:1px solid #ECECEC;
+	border-radius:10%;
+	background-color:#ECECEC;
+	min-width:25%;
+	margin:0 35%;
+	opacity:.8;	
 }
 .weather-details {
-	color:#FFFFFF;
+	color:#000000;
 }
 .writtenBy {
 	color:#000000;
@@ -31,4 +34,18 @@ body {
 }
 .sm-links:hover {
 	text-decoration:none;
+}
+
+
+@media screen and (max-width:449px) {
+	.weather-div {
+		min-width:50%;
+		margin:0 25%;
+	}
+}
+@media (min-width:450px) and (max-width: 725px) {
+	.weather-div {
+		min-width:40%;
+		margin:0 30%;
+	}
 }

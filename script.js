@@ -25,22 +25,22 @@ $(document).ready(function(){
 				$('.weather-location')
 					.text(weatherLocation + ',')
 					.css('font-size', '2em')
-					.css('color', '#FFFFFF');
+					.css('color', '#000000');
 				//add description of weather
 				$('.weather-description')
 					.text(weatherDescription)
 					.css('font-size', '2em')
-					.css('color', '#FFFFFF');
+					.css('color', '#000000');
 				//add temperature in fahrenheit
 				$('.weather-fahrenheit')
 					.text(weatherFahrenheit + ' F')
 					.css('font-size', '2em')
-					.css('color', '#FFFFFF')
+					.css('color', '#000000')
 					.show();
 				$('.weather-celsius')
 					.text(weatherCelsius + ' C')
 					.css('font-size', '2em')
-					.css('color', '#FFFFFF')
+					.css('color', '#000000')
 					.hide();
 				$('.weather-image').prepend('<img id="theWeatherIcon" src="http://openweathermap.org/img/w/' + weatherIcon + '.png' + '"' + '/>');
 			}
