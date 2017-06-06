@@ -1,8 +1,8 @@
 body {
-	background: url('http://wallpapercave.com/wp/MFwJJsF.jpg')no-repeat center fixed;
+	background: url('../cloud.jpg')no-repeat center fixed;
 }
 .weatherAppContainer {
-	margin-top:5%;
+	margin-top:10%;
 }
 .header-title {
 	font-size:3em;
@@ -11,8 +11,8 @@ body {
 .weather-div {
 	border:1px solid #ECECEC;
 	background-color:#ECECEC;
-	min-width:25%;
-	margin:0 35%;
+	min-width:40%;
+	margin:0 30%;
 	opacity:.8;	
 }
 .weather-details {
@@ -34,17 +34,29 @@ body {
 .sm-links:hover {
 	text-decoration:none;
 }
-
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin:2% auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 @media screen and (max-width:449px) {
 	.weather-div {
-		min-width:50%;
-		margin:0 25%;
+		min-width:90%;
+		margin:0 5%;
 	}
 }
 @media (min-width:450px) and (max-width: 725px) {
 	.weather-div {
-		min-width:40%;
-		margin:0 30%;
+		min-width:60%;
+		margin:0 20%;
 	}
 }

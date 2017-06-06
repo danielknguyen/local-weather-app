@@ -20,6 +20,7 @@ $(document).ready(function(){
 				weatherIcon =  data.weather[0].icon;
 
 				console.log(data);
+				$('.loader').hide();
 
 				//add user location
 				$('.weather-location')
@@ -33,12 +34,12 @@ $(document).ready(function(){
 					.css('color', '#000000');
 				//add temperature in fahrenheit
 				$('.weather-fahrenheit')
-					.text(weatherFahrenheit + ' F')
+					.text(weatherFahrenheit + '°F')
 					.css('font-size', '2em')
 					.css('color', '#000000')
 					.show();
 				$('.weather-celsius')
-					.text(weatherCelsius + ' C')
+					.text(weatherCelsius + '°C')
 					.css('font-size', '2em')
 					.css('color', '#000000')
 					.hide();
