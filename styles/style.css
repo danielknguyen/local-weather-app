@@ -1,16 +1,15 @@
 body {
-	background: url('../galaxy-wallpaper-11.jpg')no-repeat;
+	background: url('http://wallpapercave.com/wp/MFwJJsF.jpg')no-repeat center fixed;
 }
 .weatherAppContainer {
 	margin-top:5%;
 }
 .header-title {
 	font-size:3em;
-	color:#FFFFFF;
+	color:#000000;
 }
 .weather-div {
 	border:1px solid #ECECEC;
-	border-radius:10%;
 	background-color:#ECECEC;
 	min-width:25%;
 	margin:0 35%;
