@@ -1,19 +1,22 @@
 .header-title {
-	margin-top:20%;
-	font-size:8em;
-	color:#FFFFFF;
+	margin-top:15%;
+	font-size:3.5em;
+	color:#000000;
 }
-.writtenBy {
+.borderAround {
 	color:#000000;
 	margin:2.5%;
-	font-size:2em;
+	font-size:1.5em;
 }
 .weather-div {
 	font-size:2.5em;
-	margin:0 25%; 
-	width:50%;
+	margin:25% 2.5%; 
+	width:95%;
 }
 .footer {
 	font-size:1.5em;
 	margin-top:10%;
+}
+body {
+	background:url('https://4.bp.blogspot.com/-YukhmWK5jeA/VrPzyichSRI/AAAAAAAAEjE/thCBNhTlnXk/s1600/Cloud%2BWallpaper%2Biphone%2B6.png')center fixed;
 }
