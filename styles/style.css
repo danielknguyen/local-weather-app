@@ -9,6 +9,7 @@ body {
 	font-size:3em;
 	color:#000000;
 	font-family: 'Bree Serif', serif;
+	user-select:none;
 }
 .weather-div {
 	border:1px solid #ECECEC;
@@ -51,8 +52,12 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-#weather-details {
+#weather-info {
 	font-family: 'Signika', sans-serif;
+	user-select:none;
+}
+.weather-celsius,.weather-fahrenheit {
+	cursor:pointer;
 }
 @media screen and (max-width:449px) {
 	.weather-div {
