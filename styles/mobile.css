@@ -1,21 +1,28 @@
 .header-title {
-	margin-top:15%;
-	font-size:3.5em;
-	color:#000000;
+	margin-top:40px;
+	font-size:7em;
 }
 .borderAround {
 	color:#000000;
-	margin:2.5%;
-	font-size:1.5em;
+	margin:20px 0;
+	font-size:2.5em;
 }
 .weather-div {
-	font-size:2.5em;
-	margin:25% 2.5%; 
-	width:95%;
+	margin-top:125px;
+	width:650px;
+	height:650px;
 }
 .footer {
-	font-size:1.5em;
+	font-size:7em;
 	margin-top:10%;
+}
+.loader {
+    width: 220px;
+    height: 220px;
+    margin:5% auto;
+}
+#weather-info {
+	font-size:2.5em;
 }
 body {
 	background:url('https://4.bp.blogspot.com/-YukhmWK5jeA/VrPzyichSRI/AAAAAAAAEjE/thCBNhTlnXk/s1600/Cloud%2BWallpaper%2Biphone%2B6.png')center fixed;

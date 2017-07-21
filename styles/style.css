@@ -5,14 +5,18 @@ body {
 	margin-top:10%;
 }
 .header-title {
+	margin-top:25px;
 	font-size:3em;
 	color:#000000;
+	font-family: 'Bree Serif', serif;
 }
 .weather-div {
 	border:1px solid #ECECEC;
+	border-radius:40px;
 	background-color:#ECECEC;
-	min-width:40%;
-	margin:0 30%;
+	width:300px;
+	height:325px;
+	margin:0 auto;
 	opacity:.8;	
 }
 .weather-details {
@@ -41,22 +45,17 @@ body {
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
-    margin:2% auto;
+    margin:10% auto;
 }
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
+#weather-details {
+	font-family: 'Signika', sans-serif;
+}
 @media screen and (max-width:449px) {
 	.weather-div {
-		min-width:90%;
-		margin:0 5%;
-	}
-}
-@media (min-width:450px) and (max-width: 725px) {
-	.weather-div {
-		min-width:60%;
-		margin:0 20%;
+		margin-top:100px;
 	}
 }
